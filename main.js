@@ -19,9 +19,6 @@ var clock = setInterval(function(){ //apro la funzione che fa partire il mio tim
 function myStopFunction() {
 clearInterval(clock);
 }
-$('.arrowRight').click(function() {
-  $('body').css('background-position', 'top');
-});
 
 $(document).ready(function() {
   $('.arrowRight').click(function() { // se clicco sulla freccia di destra, lo sfondo del body sale (la birra aumenta:P)
