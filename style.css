@@ -6,6 +6,7 @@
 body {
   background-image:url('img/sfondo.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header {

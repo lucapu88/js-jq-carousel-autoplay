@@ -24,10 +24,10 @@ $('.arrowRight').click(function() {
 });
 
 $(document).ready(function() {
-  $('.arrowRight').click(function() {
+  $('.arrowRight').click(function() { // se clicco sulla freccia di destra, lo sfondo del body sale (la birra aumenta:P)
     $('body').css('background-position', 'center');
   });
-  $('.arrowLeft').click(function() {
+  $('.arrowLeft').click(function() { // se clicco sulla freccia di destra, lo sfondo scende (la birra diminuisce :( )
     $('body').css('background-position', 'top');
   });
   $('.arrowRight').click(function() { //al click sulla freccia di destra imposto una funzione.
