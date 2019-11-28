@@ -19,8 +19,17 @@ var clock = setInterval(function(){ //apro la funzione che fa partire il mio tim
 function myStopFunction() {
 clearInterval(clock);
 }
+$('.arrowRight').click(function() {
+  $('body').css('background-position', 'top');
+});
 
 $(document).ready(function() {
+  $('.arrowRight').click(function() {
+    $('body').css('background-position', 'center');
+  });
+  $('.arrowLeft').click(function() {
+    $('body').css('background-position', 'top');
+  });
   $('.arrowRight').click(function() { //al click sulla freccia di destra imposto una funzione.
     var imgActive = $('img.active'); //dichiaro la var contenente l'immagine visibile.
     var imgNext = imgActive.next('img'); //dichiaro la var contenente l'immagine successiva.
