@@ -1,6 +1,21 @@
 // l'esercitazione di oggi prevede di aggiungere l'autoplay allo slider.
 // L'idea è che ogni 3 secondi le slide cambino da sole, passando in automatico a visualizzare la slide successiva.
 
+var clock = setInterval(function(){ //apro la funzione che fa partire il mio timer
+  var imgActive = $('img.active'); //dichiaro la var contenente l'immagine visibile.
+  var imgNext = imgActive.next('img'); //dichiaro la var contenente l'immagine successiva.
+  var dotActive = $('i.active'); //dichiaro la var contenente il pallino attivo (colorato di blu).
+  var dotNext = dotActive.next('i'); //dichiaro la var contenente il pallino successivo.
+  if (imgNext.length == 0) { //controllo che ci sia un'immagine e nel caso non c'è, riprende l'immagine iniziale
+   imgNext = $('img.first'); //se c'è un'immagine successiva, si prende la prima
+   dotNext = $('i.first'); //se non c'è un pallino successivo, si prende il primo
+  }
+  (imgActive).removeClass('active'); //rimuovo la classe active all'immagine
+  (dotActive).removeClass('active'); //rimuovo la classe active al pallino
+  (imgNext).addClass('active'); //aggiungo la classe active all'immagine
+  (dotNext).addClass('active'); //aggiungo la classe active al pallino
+}, 3000) //tutto ciò che è stato dichiarato all'interno di questa funzione avviene con un intervallo di 3 secondi, quindi ogni 3 secondi lo slider cambia in automatico l'immagine.
+
 $(document).ready(function() {
   $('.arrowRight').click(function() { //al click sulla freccia di destra imposto una funzione.
     var imgActive = $('img.active'); //dichiaro la var contenente l'immagine visibile.
