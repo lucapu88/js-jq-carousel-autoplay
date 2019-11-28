@@ -14,7 +14,11 @@ var clock = setInterval(function(){ //apro la funzione che fa partire il mio tim
   (dotActive).removeClass('active'); //rimuovo la classe active al pallino
   (imgNext).addClass('active'); //aggiungo la classe active all'immagine
   (dotNext).addClass('active'); //aggiungo la classe active al pallino
+
 }, 3000) //tutto ciò che è stato dichiarato all'interno di questa funzione avviene con un intervallo di 3 secondi, quindi ogni 3 secondi lo slider cambia in automatico l'immagine.
+function myStopFunction() {
+clearInterval(clock);
+}
 
 $(document).ready(function() {
   $('.arrowRight').click(function() { //al click sulla freccia di destra imposto una funzione.
