@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('https://www.birrekiem.com/uploads/fl_realurl_image/home-kiem-importazione-birra-alto-adige-54.jpg');
+}
+header {
+  display: flex;
+  justify-content: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+  color: green;
+}
+.container {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carosello {
+  display: flex;
+  width: 500px;
+  position: relative;
+}
+.arrowLeft, .arrowRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+i {
+  color: lightgrey;
+}
+.fas:hover{
+  color: darkblue;
+}
+.carosello img {
+  width: 100%;
+  border-radius: 20px;
+  display: none;
+}
+.carosello img.active {
+  display: block;
+}
+.dots {
+  position: absolute;
+  bottom: 5%;
+}
+.dots i.active {
+  color: darkblue;
+}
