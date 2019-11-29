@@ -7,7 +7,7 @@ var clock = setInterval(function(){ //apro la funzione che fa partire il mio tim
   var dotActive = $('i.active'); //dichiaro la var contenente il pallino attivo (colorato di blu).
   var dotNext = dotActive.next('i'); //dichiaro la var contenente il pallino successivo.
   if (imgNext.length == 0) { //controllo che ci sia un'immagine e nel caso non c'è, riprende l'immagine iniziale
-   imgNext = $('img.first'); //se c'è un'immagine successiva, si prende la prima
+   imgNext = $('img.first'); //se non c'è un'immagine successiva, si prende la prima
    dotNext = $('i.first'); //se non c'è un pallino successivo, si prende il primo
   }
   (imgActive).removeClass('active'); //rimuovo la classe active all'immagine
@@ -16,7 +16,7 @@ var clock = setInterval(function(){ //apro la funzione che fa partire il mio tim
   (dotNext).addClass('active'); //aggiungo la classe active al pallino
 
 }, 3000) //tutto ciò che è stato dichiarato all'interno di questa funzione avviene con un intervallo di 3 secondi, quindi ogni 3 secondi lo slider cambia in automatico l'immagine.
-function myStopFunction() {
+function myStopFunction() { // questo è il pulsante di fermo animazione. se si clicca su una delle 2 freccie, il timer viene fermato e si può continuare a visualizzare le immagini con il click sulle frecce.
 clearInterval(clock);
 }
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
     var imgNext = imgActive.next('img'); //dichiaro la var contenente l'immagine successiva.
     var dotActive = $('i.active'); //dichiaro la var contenente il pallino attivo (colorato di blu).
     var dotNext = dotActive.next('i');//dichiaro la var contenente il pallino successivo.
-    if (imgNext.length == 0) { //controllo che ci sia un'immagine e nel caso non c'è, riprende l'immagine iniziale
+    if (imgNext.length == 0) { //controllo che ci sia un'immagine e nel caso non c'è, riprende l'immagine iniziale (stessa cosa per il pallino)
       imgNext = $('img.first');
       dotNext = $('i.first');
     }
